@@ -11,7 +11,6 @@ public class TestCalculator {
         int arg2 = 1;
         int expectedResult = 2;
 
-
         //Act = Action
         int returnedResult = Calculator.add(arg1, arg2);
 
@@ -19,7 +18,7 @@ public class TestCalculator {
         Assert.assertEquals(expectedResult,returnedResult);
 
     }
-    @Test  (expected =IndexOutOfBoundsException.class)// Pour le cas "MAX+1" = MIN (reflection de manière cyclique)
+    @Test  (expected =IndexOutOfBoundsException.class)// Pour le cas "MAX+1" = MIN (calculer de manière cyclique)
     public void testMax()
     {
         // AAA
@@ -36,18 +35,20 @@ public class TestCalculator {
     }
 
     @Test  (expected =IndexOutOfBoundsException.class)// Pour le cas "MIN+(-1)" = MAX
-    public void testMin()
-    {
+    public void testMin() {
         // AAA
         //  Arrange = Organiser
         int arg1 = Integer.MIN_VALUE;  // Integer.MIN_VALUE = -2147483648
         int arg2 = -1;
 
 
-
         //Act = Action
         int returnedResult = Calculator.add(arg1, arg2);
 
+
+    }
+    @Test
+    public void TestFailed(){
 
     }
 }
