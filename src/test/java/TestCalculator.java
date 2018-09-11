@@ -48,7 +48,6 @@ public class TestCalculator {
 
     }
     @Test
-    public void TestFailed(){
-
+    public void TestFailed(){ Assert.fail();
     }
 }
